@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.9" height="41.5" viewBox="0 0 42.9 41.5">
+  <title>button-cart-empty-light</title>
+  <g>
+    <polygon points="36 33 7.2 33 12.8 24.7 4.6 5 0 5 0 0 7 0 16.9 24.2 13.9 29 36 29 36 33" style="fill: #fff"/>
+    <polygon points="42.9 6.8 11 6.8 18.3 24.1 35.6 24.1 42.9 6.8" style="fill: #fff"/>
+    <circle cx="10.9" cy="37.8" r="3.7" style="fill: #fff"/>
+    <circle cx="33" cy="37.8" r="3.7" style="fill: #fff"/>
+  </g>
+</svg>
