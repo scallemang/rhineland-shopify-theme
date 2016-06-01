@@ -837,10 +837,33 @@ body {
 			}
 			span {
 				display: none;
-				&.hover-price {
+				&.hover-price,
+				&.original-price {
 					display: block;
 					font-size: 30px;
 					margin-top: 10px;
+				}
+				&.original-price {
+					@media (min-width: 768px) and (max-width: 1023px) {
+						display: none !important;
+					}
+					display: inline !important;
+					margin-top: 10px !important;
+					position: relative;
+					color: $color-secondary;
+					&:before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 0;
+						right: 0;
+						height: 3px; /* ADJUST HEIGHT TO ADD WEIGHT */
+						background: $color-white; /* CHANGE COLOR TO SUIT */
+						z-index: 10;
+						-ms-transform: rotate(-7deg);
+						-webkit-transform: rotate(-7deg);
+						transform: rotate(-7deg);
+					}
 				}
 			}
 			sup {

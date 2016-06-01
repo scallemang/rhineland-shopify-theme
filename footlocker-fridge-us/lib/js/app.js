@@ -23,6 +23,9 @@ $('#shopping-cart .icon-x').click(function(){
 
 $(document).ready(function(){
     $heroTitle.html(function(_, html) {
-	   return html.split('Preorder').join("<span>Preorder</span>");
+	   return html.split('Preorder Offer Save $50').join("<br><span>Preorder Offer Save $50</span>");
+	});
+	$heroTitle.html(function(_, html) {
+	   return html.split('Coming Soon').join("<br><span>Coming Soon</span>");
 	});
 });

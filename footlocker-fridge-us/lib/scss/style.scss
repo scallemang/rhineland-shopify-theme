@@ -19,6 +19,7 @@ $visual-grid-index: front;
 
 // Mixins
 @mixin flex-center {
+	-js-display: flex;
 	display: flex;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
@@ -368,10 +369,12 @@ body {
 					transition: all 250ms;
 					background-color: transparent;
 					position: relative;
+					-js-display: flex;
 					display: flex;
 					overflow: hidden;
 					cursor: pointer;
 					&:first-of-type {
+						-js-display: flex;
 						display: flex;
 						height: 66px;
 						background-color: $color-secondary;
@@ -396,6 +399,7 @@ body {
 					}
 				}
 				&:hover li {
+					-js-display: flex;
 					display: flex;
 					height: 66px;
 					background-color: $color-secondary;
@@ -803,6 +807,7 @@ body {
 			left: 0;
 			width: 100%;
 			height: 100%;
+			-js-display: flex;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -823,10 +828,30 @@ body {
 			}
 			span {
 				display: none;
-				&.hover-price {
+				&.hover-price,
+				&.original-price {
 					display: block;
 					font-size: 30px;
 					margin-top: 10px;
+				}
+				&.original-price {
+					display: inline !important;
+					margin-top: 10px !important;
+					position: relative;
+					color: $color-secondary;
+					&:before {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 0;
+						right: 0;
+						height: 3px; /* ADJUST HEIGHT TO ADD WEIGHT */
+						background: $color-white; /* CHANGE COLOR TO SUIT */
+						z-index: 10;
+						-ms-transform: rotate(-7deg);
+						-webkit-transform: rotate(-7deg);
+						transform: rotate(-7deg);
+					}
 				}
 			}
 			sup {
