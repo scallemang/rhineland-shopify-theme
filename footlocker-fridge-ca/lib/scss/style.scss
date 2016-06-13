@@ -495,6 +495,7 @@ body {
 		line-height: 1em !important;
 		letter-spacing: 0.35px;
 		margin-right: 20px;
+		border: none;
 		&#AddToCartText {
 			margin-right: 0;
 		}
@@ -727,8 +728,8 @@ body {
 				@include span-columns(10);
 				@include shift(1);
 				@media (min-width: $large) {
-					@include span-columns(8);
-					@include shift(2);
+					@include span-columns(6);
+					@include shift(3);
 				}
 				//width: 100%;
 				p {
@@ -869,6 +870,56 @@ body {
 			sup {
 				font-size: 15px;
 				vertical-align: middle;
+			}
+		}
+	}
+
+	// Cart page
+	&.template-cart {
+		td {
+			min-width: 80px;
+		}
+		textarea {
+			display: block;
+		}
+		.h4, .cart__remove {
+			text-transform: uppercase;
+			font-size: 1.875em;
+			line-height: 1.1em;
+			color: #EfA72A;
+		    font-family: "jaf-bernino-sans-condensed", "Arial Black", Verdana, "Droid Sans", sans-serif;
+		    text-decoration: none;
+		    font-weight: bold;
+		    display: block;
+		}
+		.cart__remove {
+			color: #272c28;
+		}
+		.h3 {
+
+			color: #4F5850;
+			font-family: "jaf-bernino-sans-condensed", "Arial Black", Verdana, "Droid Sans", sans-serif;
+			font-size: 20px;
+			padding: 0;
+		}
+		.js-qty {
+			input {
+			    background: transparent;
+			    border: none;
+			    font-family: "jaf-bernino-sans-condensed", "Arial Black", Verdana, "Droid Sans", sans-serif;
+			    width: 26px;
+			    font-size: 20px;
+			    text-align: center;
+			    color: #4F5850;
+			    outline: none !important;
+			}
+			button {
+				border: none;
+				background: transparent;
+				color: #4F5850;
+				font-family: "jaf-bernino-sans-condensed", "Arial Black", Verdana, "Droid Sans", sans-serif;
+				font-size: 20px;
+				padding: 0;
 			}
 		}
 	}
