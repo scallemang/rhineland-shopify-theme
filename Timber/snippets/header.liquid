@@ -1,0 +1,35 @@
+<header class="site-header" role="banner">
+      <div class="wrapper">
+
+        <div class="float-wrapper">
+
+            <nav class="store-selector">
+				<ul>
+					<li><span class="flag primary-flag"><img src="{{'flag-us.svg' | asset_url }}"></span></li>
+					<li><span class="flag"><img src="{{'flag-ca.svg' | asset_url }}"></span></li>
+				<!-- <ul>
+					<li>UK</li>
+					<li>USA</li>
+				</ul> -->
+			</nav>
+          
+            {% comment %}
+              Show number of items in the cart and total cost in the /cart link
+
+              Ajax Cart Notes:
+                - #cartCount updates the total number of items in the cart
+                - #cartCost updates the total cost of the cart
+                - Documentation:  http://shopify.com/timber#ajax-cart
+            {% endcomment %}
+              <a href="/cart" class="site-header__cart-toggle js-drawer-open-right cart" aria-controls="CartDrawer" aria-expanded="false">
+                {% if cart.item_count == 0 %}
+                  <img src="{{'button-cart-empty-dark.svg' | asset_url }}">
+                {% else %} 
+                  <img src="{{'button-cart-full-dark.svg' | asset_url }}">
+                {% endif %} 
+              </a>
+          
+        </div>
+
+      </div>
+    </header>
